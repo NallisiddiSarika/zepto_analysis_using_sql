@@ -5,8 +5,11 @@ This is a real-world data analyst project based on an e-commerce inventory datas
 The objective of the project is to finding the real business insights using SQL. It includes the following:
 
 ✅ Set up a messy, real-world e-commerce inventory database
+
 ✅ Perform Exploratory Data Analysis (EDA) to explore product categories, availability, and pricing inconsistencies
+
 ✅ Implement Data Cleaning to handle null values, remove invalid entries, and convert pricing from paise to rupees
+
 ✅ Write business-driven SQL queries to derive insights around pricing, inventory, stock availability, revenue and more
 
 # Dataset
@@ -45,21 +48,23 @@ x. quantity: Number of units per package (mixed with grams for loose produce)
 # Project Steps
 
 Here’s a step-by-step breakdown of what we do in this project:
+
 **1. Database and Table Creation**
+
 As start of the project , first created a database and table.
 
     create table zepto(
-sku_id SERIAL PRIMARY KEY,
-category VARCHAR(120),
-name VARCHAR(150) NOT NULL,
-mrp NUMERIC(8,2),
-discountPercent NUMERIC(5,2),
-availableQuantity INTEGER,
-discountedSellingPrice NUMERIC(8,2),
-weightInGms INTEGER,
-outOfStock BOOLEAN,
-quantity INTEGER
-);
+    sku_id SERIAL PRIMARY KEY,
+    category VARCHAR(120),
+    name VARCHAR(150) NOT NULL,
+    mrp NUMERIC(8,2),
+    discountPercent NUMERIC(5,2),
+    availableQuantity INTEGER,
+    discountedSellingPrice NUMERIC(8,2),
+    weightInGms INTEGER,
+    outOfStock BOOLEAN,
+    quantity INTEGER
+    );
 
 **2. Data Import**
 - Loaded CSV using pgAdmin's import feature.
